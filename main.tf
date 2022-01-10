@@ -48,9 +48,6 @@ resource "aws_s3_bucket" "financials" {
   # bucket is not encrypted
   # bucket does not have access logs
   # bucket does not have versioning
-  
-  
-  
   bucket        = "${local.resource_prefix.value}-financials"
   acl           = var.lala
   force_destroy = true
