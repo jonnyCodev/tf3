@@ -52,7 +52,7 @@ resource "aws_s3_bucket" "financials" {
   
   
   bucket        = "${local.resource_prefix.value}-financials"
-  acl           = "private"
+  acl           = var.lala
   force_destroy = true
   tags = merge({
     Name        = "${local.resource_prefix.value}-financials"
