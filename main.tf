@@ -5,12 +5,12 @@ resource "aws_s3_bucket" "data" {
   # bucket does not have versioning
   
   
-  bucket        = "${local.resource_prefix.value}-data"
+  bucket        = "test-data"
   acl           = "public-read"
   force_destroy = true
   tags = merge({
-    Name        = "${local.resource_prefix.value}-data"
-    Environment = local.resource_prefix.value
+    Name        = "test"
+    Environment = "test"
     }, {
     git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
     git_file             = "terraform/aws/s3.tf"
